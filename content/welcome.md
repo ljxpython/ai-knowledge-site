@@ -7,9 +7,9 @@ order: 1
 published: true
 resources:
   - label: "Project repository"
-    url: "https://github.com/ljxpython/knowledge-site-template"
+    url: "https://github.com/ljxpython/ai-knowledge-site"
   - label: "Local UTF-8 Python example"
-    url: "/knowledge-site-template/examples/utf8-example.py"
+    url: "/ai-knowledge-site/examples/utf8-example.py"
 ---
 
 ## The promise

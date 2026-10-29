@@ -10,22 +10,22 @@ export interface CollectionConfig {
 }
 
 export const site = {
-  title: '知识笔记',
-  description: '专注于知识沉淀、技术架构与系统化文档对外展示。',
-  author: 'Your name',
+  title: 'AI Knowledge Site',
+  description: 'AI 应用开发、核心原理与工程实战全景知识库。',
+  author: 'ljxpython',
   url: 'https://ljxpython.github.io',
-  base: '/knowledge-site-template',
-  repositoryUrl: 'https://github.com/ljxpython/knowledge-site-template',
+  base: '/ai-knowledge-site',
+  repositoryUrl: 'https://github.com/ljxpython/ai-knowledge-site',
   accent: {
-    primary: '#a56a15',
-    soft: '#f4e8d3',
+    primary: '#0284c7',
+    soft: '#e0f2fe',
   },
   navigation: {
-    label: '知识笔记',
+    label: 'AI 知识库',
     sourceLabel: '查看源码',
   },
   links: {
-    github: 'https://github.com/ljxpython/knowledge-site-template',
+    github: 'https://github.com/ljxpython/ai-knowledge-site',
   },
   collections: [
     {
@@ -35,7 +35,7 @@ export const site = {
       order: 1,
       sectionMode: 'collapsible' as const,
       sourceLabel: '查看源码',
-      sourceUrl: 'https://github.com/ljxpython/knowledge-site-template',
+      sourceUrl: 'https://github.com/ljxpython/ai-knowledge-site',
       notice: '示例代码仅供学习参考。若要在本地测试，请手动执行相应命令。',
     },
     {
@@ -45,7 +45,7 @@ export const site = {
       order: 2,
       sectionMode: 'flat' as const,
       sourceLabel: '查看源码',
-      sourceUrl: 'https://github.com/ljxpython/knowledge-site-template',
+      sourceUrl: 'https://github.com/ljxpython/ai-knowledge-site',
     },
   ],
 } as const;
