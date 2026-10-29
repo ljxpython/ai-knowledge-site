@@ -40,14 +40,15 @@ export function parseDoc(rawContent) {
   return { data, body };
 }
 
-function validateLocalResource(url) {
-  if (!url.startsWith(`${siteBase}/`)) {
+function validateLocalResource(url, siteConfig = site) {
+  const base = (siteConfig.base || '').replace(/\/$/, '');
+  if (!url.startsWith(`${base}/`)) {
     return false;
   }
 
   let relativePath;
   try {
-    relativePath = decodeURIComponent(url.slice(siteBase.length + 1));
+    relativePath = decodeURIComponent(url.slice(base.length + 1));
   } catch {
     return false;
   }
@@ -76,7 +77,7 @@ export function validateDoc(id, data, siteConfig = site) {
 
   for (const resource of data.resources ?? []) {
     const isExternal = URL.canParse(resource.url);
-    const isLocal = validateLocalResource(resource.url);
+    const isLocal = validateLocalResource(resource.url, siteConfig);
     if (!resource.label || (!isExternal && !isLocal)) {
       throw new Error(`Document "${id}" has an invalid resource entry.`);
     }
